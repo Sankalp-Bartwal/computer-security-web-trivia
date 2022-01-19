@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>trivia
+    </title>
+
+    <style>
+        :root {
+            --lower_height: 11vh;
+            --lower_color: rgb(16, 17, 122);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0 0;
+            padding: 0 0;
+        }
+
+        .menu_container {
+            width: 100vw;
+            height: 5vh;
+            /* border: 2px solid black; */
+            position: fixed;
+            top: 0;
+            /* background-color: var(--lower_color); */
+        }
+
+        .menu {
+            width: 25vw;
+            padding: 1vh 1vw;
+            position: absolute;
+            right: 0px;
+        }
+
+        .menu_option {
+            color: black;
+            text-decoration: none;
+            padding: 14px;
+            font-size: 145%;
+        }
+
+        .container {
+            height: 95vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .upper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .lower {
+            background-color: var(--lower_color);
+            height: var(--lower_height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home_image {
+            width: 74vw;
+            height: 80vh;
+        }
+
+        #line1 {
+            font-size: 90px;
+            margin-bottom: 0;
+            color: var(--lower_color);
+        }
+
+        #line2 {
+            margin-top: 0;
+            font-size: 45px;
+            color: var(--lower_color);
+        }
+
+        .button_container {
+            display: flex;
+            flex-direction: column;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        .main_container {
+            margin-left: 2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .button {
+            background-color: var(--lower_color);
+            color: white;
+            border: 3px solid black;
+            height: 5vh;
+            margin: 5px 0px;
+            font-size: 100%;
+            transition-property: all;
+            transition-duration: 2s;
+
+        }
+
+        .button:hover {
+            background-color: rgba(16, 18, 122, 0.842);
+            position: relative;
+            bottom: 3px;
+        }
+
+        #game_mode1,
+        #game_mode2 {
+            display: none;
+        }
+
+        #back {
+            display: inline-block;
+            width: 3vw;
+            height: 5vh;
+            border-radius: 100%;
+            font-size: 150%;
+            display: none;
+        }
+
+        #image_credit {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu_container">
+        <div class="menu">
+            <a href="" class="menu_option">Rules</a>
+            <a href="" class="menu_option">About</a>
+            <a href="" class="menu_option">Contact us</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="upper">
+            <div class="main_container">
+                <h1 class="title" id="line1">Computer</h1>
+                <h1 class="title" id="line2">Security Trivia</h1>
+                <div class="button_container">
+                    <input type="button" value="Single Player" id="singleplayer" class="button" onclick="singleGame()">
+                    <input type="button" value="Multiplayer" id="multiplayer" class="button" onclick="multiGame()">
+                </div>
+            </div>
+            <div class="image_conatiner">
+                <img src="http://localhost:3000/home_image" alt="" id="home_image">
+            </div>
+        </div>
+        <div class="lower">
+            <a href="http://www.freepik.com" id="image_credit">Image Designed by vectorjuice / Freepik</a>
+        </div>
+    </div>
+
+    <script>
+        function singleGame() {
+            window.open("http://localhost:3000/singleplayer", "_self");
+        }
+        function multiGame() {
+            window.open("http://localhost:3000/multiplayer", "_self");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+Q:Which of these is NOT part of the NIST password guidelines?
+A:Passwords must contain at least one uppercase character, one digit, and one special character
+0:Don't force users to change passwords periodically
+0:Allow passwords to be copy-pasted into password fields
+0:Passwords must contain at least 8 characters
+Q:What is the safest way to store passwords in a database?
+A:As a hash of the password that has also been salted (and possibly peppered)
+0:As an encryption of the password
+0:As a plaintext of the password
+0:As a plaintext of the password written in reverse
+Q:What is the MOST effective way to prevent someone from retrieving sensitive information from a hard drive that has been disposed of?
+A:Physically destroy the hard drive
+0:Dispose of it somewhere that is well hidden
+0:Delete the files it contains by moving them all to the recycling bin first
+0:Dipose of it along with all of your household garbage
+Q:What type of attack are cryptographic schemes NOT good at protecting against?
+A:Rubber hose attack
+0:Brute force attack
+0:Man in the middle attack
+0:Replay attack
+Q:Which of these is NOT a method used in password storage?
+A:Ketchup
+0:Salt
+0:Pepper
+0:Hash
+Q:Phishing is an example of what type of attack?
+A:Social engineering
+0:Ransomware
+0:Spyware
+0:Adware
+Q:Who should be granted access to root permissions?
+A:Only the most trustworthy users
+0:Everyone
+0:Only people who ask for it
+0:Your friends
+Q:What type of malware aims to gather information about a target's activities on their device?
+A:Spyware
+0:Ransomware
+0:Adware
+0:Scareware
+Q:What is the name of Canada's private-sector privacy law?
+A:PIPEDA
+0:CPSPL
+0:CanPriv
+0:Privacy Canada
+Q:Which of these browsers is the best for privacy?
+A:Tor
+0:Firefox
+0:Safari
+0:Google Chrome
+Q:Which of these is NOT part of Canadian Privacy Law?
+A:Information must not be accessible to anyone outside of the collectors, including those who have had their information collected
+0:Informed consent must be obtained prior to collecting, using, or disclosing personal information
+0:Data collection must be limited to what is needed for the stated purpose of collection
+0:Data collectors must provide security safeguards for all personal information collected
+Q:What is device fingerprinting?
+A:The process of collecting information about a device's software/hardware for the purpose of identification
+0:Swabbing the device for traces of a hidden explosive as is done in airports
+0:A method of unlocking your device using your fingerprint
+0:Customizing a device with accessories so it is easy to visually identify as yours
+Q:What is the biggest threat to current encryption schemes?
+A:Quantum computing
+0:Google
+0:Smarter hackers
+0:Foreign intelligence
+Q:What makes quantum encryption so much stronger than current encryption schemes?
+A:It is based on the laws of physics, which cannot be broken
+0:It is based on even harder mathematical problems
+0:It is new, so attackers haven't had enough time to figure out how to break it
+0:It is top secret, so attackers don't even know how to attack it
+Q:What is cryptojacking?
+A:A malware that allows the attacker to mine cryptocurrency on the infected device
+0:The act of stealing someone else's cryptocurrency
+0:A cryptocurrency
+0:Inflating the price of cryptocurrencies

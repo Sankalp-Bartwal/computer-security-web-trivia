@@ -1,0 +1,100 @@
+Q:Which of these should you be MOST worried about when it comes to security threats?
+A:Advertising companies
+0:Organized Crime
+0:Your neighbour
+0:Terrorists
+Q:What does the term "phishing" mean?
+A:An attempt to trick someone into providing sensitive information, such as passwords or banking details
+0:A pastime where people try to catch fish
+0:When people post something on social media looking for attention
+0:Another term for browsing the internet
+Q:What is a common sign of phishing in an email/message?
+A:Language that incites urgency
+0:The sender uses your name
+0:High quality images and logos
+0:The sender's ID matches a known ID from who they claim to be
+Q:Which of the following is the SAFEST practice when creating new passwords?
+A:Use a different password for each account/website you use
+0:Make sure it contains a word or number that has lots of meaning to you, like someone's name or birthday
+0:Don't use more than 4 characters so that it's easy to remember
+0:Write the password down on a piece of paper/sticky note that you keep near your device in case you forget it
+Q:How can you protect yourself against a ransomware attack?
+A:Backup your files regularly
+0:Write down the names of all your files on a piece of paper
+0:Keep some money saved up in case you ever have to pay to get your data back
+0:Download a ransomware protector from a sketchy-looking website
+Q:What is a common sign that you have a virus on your device?
+A:Your device has slowed down or is working harder than normal
+0:You feel like you are being watched while using your device
+0:Your YouTube videos are only loading in 480p
+0:Your internet connection isn't very strong
+Q:What is the best way to protect yourself from malware?
+A:Use an antivirus and scan your device regularly
+0:Click on a pop-up telling you that your device has a virus
+0:Never update your device in case the update contains malware
+0:Put a password on your device
+Q:How do you know if a website connection is secure?
+A:Look for a lock icon or "https"
+0:The website promises that it is
+0:Look for ".com" in the url
+0:The word "secure" appears in the url
+Q:How can you stop websites from tracking your data?
+A:Use a browser or browser extension that blocks website trackers
+0:Use incognito/private browsing mode
+0:Ask them not to
+0:Only use web browsers from large companies like Google
+Q:How can you stay safe on public Wi-Fi networks?
+A:Avoid entering any sensitive information, such as credit card information
+0:Treat it as if you were on your own private network
+0:Cover your screen so no one can see what you're doing
+0:Use incognito or private-browsing mode
+Q:How can you protect your privacy on social media?
+A:All of these are correct
+0:Set your account to private
+0:Disable the "geo-tagging" feature before posting photos
+0:Don't enter any more personal information than is required
+Q:What kind of information can a website collect about you?
+A:All of these are correct
+0:Location
+0:Language
+0:Device information
+Q:Which of these is the best way to restrict access to your files/accounts/devices?
+A:Use multi-factor authentication
+0:Protect them with a password only
+0:Only share passwords with people you trust
+0:Physically secure them
+Q:Which of these is a good practice to defend against identity thieves?
+A:Shred any documents with your personal information before discarding them
+0:Always use your SIN to identify yourself so that people know it's really you
+0:Carry multiple credit cards in case you lose one
+0:All of these are correct
+Q:What is a common sign that you have become a victim of identity theft?
+A:All of these are correct
+0:Your bills aren't arriving when they are supposed to
+0:Your bank contacts you about a new account that has been created in your name
+0:Your bank account contains withdrawals and payments that you didn't make
+Q:Which of these is the safest method of storing personal passwords?
+A:Using a password manager
+0:Using a notebook that you keep with you
+0:Using an excel sheet on your device
+0:Memorizing them and resetting them if you forget
+Q:Which of these is the best practice when setting up your home router?
+A:Change the default name and password for the router
+0:Give it a funny name
+0:Remove the password so that it is faster to connect to
+0:Keep it in a room with a lock so that only you can physically access it
+Q:How should you keep devices that are connected to the "Internet of Things" secure?
+A:Set them up on a separate, secure Wi-Fi network
+0:Connect them to the same network that all of your other devices are connected to
+0:Devices connected to the "Internet of Things" are never secure
+0:Keep them in a locked room that only you can physically access
+Q:What is malware?
+A:Software that is designed to inflict harm on a device
+0:Software designed by a guy named Malcolm
+0:Hardware that is no longer working as it should
+0:Hardware that is designed to stop working after a certain amount of time
+Q:Who is most commonly targeted by phishing schemes?
+A:All of these are correct
+0:Children
+0:Senior Citizens
+0:Businesses

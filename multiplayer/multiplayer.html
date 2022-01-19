@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Multiplayer</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0 0;
+            padding: 0 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #right_tab {
+            width: 100vw;
+            height: 100vh;
+
+            position: fixed;
+            left: 0;
+
+            background-color: rgb(16, 17, 122);
+            z-index: 3;
+            color: white;
+        }
+
+        #start_container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-direction: column;
+            height: 80vh;
+        }
+
+        #start_heading {
+            font-size: 700%;
+            margin: 0 0;
+            font-weight: bolder;
+        }
+
+        .start_end_buttons {
+            font-size: 300%;
+            cursor: default;
+            margin: 2vh 2vw;
+            padding-left: 1vw;
+            padding-right: 1vw;
+
+            transition: transform 1s;
+        }
+
+        .start_end_buttons:hover {
+            cursor: pointer;
+            border: 2px solid wheat;
+        }
+
+        #warning_label {
+            font-size: 200%;
+            color: rgb(143, 0, 0);
+
+            display: none;
+        }
+
+        #name_entry1,
+        #create_button2,
+        #group_id_entry,
+        #name_entry2,
+        #back_join_container,
+        #back_button1,
+        #back_button2,
+        #join_button2 {
+            display: none;
+        }
+
+        .enteries {
+            background-color: rgba(0, 0, 0, 0.185);
+            color: white;
+            font-size: 200%;
+            text-align: center;
+        }
+
+        #back_button1,
+        #back_button2 {
+            position: relative;
+            right: 16vw;
+            order: -1;
+
+            border: 2px solid whitesmoke;
+            border-radius: 40px;
+
+            width: 4vw;
+            padding: 0;
+            text-align: center;
+        }
+
+        #group_container {
+            /* border: 2px solid black; */
+            height: 60vh;
+            width: 75%;
+
+            overflow: auto;
+            display: none;
+        }
+
+        .group {
+            width: 100%;
+            height: 9vh;
+
+            font-size: 200%;
+
+            background-image: linear-gradient(rgba(0, 0, 0, 0.068), rgba(0, 0, 0, 0.377));
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #start_info {
+            font-size: 150%;
+            display: none;
+        }
+
+        #main_content {
+            width: 85vw;
+            height: 100vh;
+
+            position: fixed;
+            right: 0;
+
+            background-image: url("http://localhost:3000/multiplayer_image");
+            background-size: 70vw 95vh;
+            background-repeat: no-repeat;
+            background-position-x: 17vw;
+            background-position-y: 23.5vh;
+
+            pointer-events: none;
+            display: none;
+        }
+
+        #question_heading {
+            margin-top: 0;
+            margin: 0;
+            padding: 0, 0;
+            font-size: 600%;
+        }
+
+        #score {
+            position: fixed;
+            top: 0;
+            right: 3vw;
+            font-size: 600%;
+        }
+
+        #lower_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #question_space {
+            width: 70vw;
+            margin: auto;
+            margin-bottom: 3vh;
+            font-size: 130%;
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(4px);
+            pointer-events: auto;
+        }
+
+        #answers_space {
+            width: 69vw;
+            margin: auto
+        }
+
+        #upper_row,
+        #lower_row {
+            display: flex;
+        }
+
+        .option {
+            /* border: 2px solid black; */
+
+            height: 10vh;
+            width: 34vw;
+            font-size: 120%;
+            text-align: center;
+            margin-top: 1vh;
+
+            pointer-events: auto;
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="right_tab">
+        <h1 id="start_heading">Multiplayer</h1>
+        <div id="start_container">
+            <div class="start_end_buttons" id="create_button1" onclick="showCreate()">Create a
+                new game</div>
+            <input class="enteries" type="text" name="" id="name_entry1" placeholder="enter your name">
+            <div class="start_end_buttons" id="create_button2" onclick="createNewGroup()">create</div>
+            <div class="start_end_buttons" id="back_button1" onclick="backButton1()">&#8592;</div>
+            <div class="start_end_buttons" id="join_button1" onclick="show_join()">Join a game
+            </div>
+            <input type="text" class="enteries" name="" id="group_id_entry" placeholder="groupID">
+            <input type="text" class="enteries" id="name_entry2" placeholder="enter your name">
+            <div class="start_end_buttons" id="back_button2" onclick="backButton2()">&#8592;</div>
+            <div id="warning_label"></div>
+            <div class="start_end_buttons" id="join_button2" onclick="joinGroup()">Join</div>
+            <div id="group_container">
+                <div id="share_container"></div>
+            </div>
+            <div id="start_button" class="start_end_buttons" style="display: none;">start</div>
+            <div id="start_info">only the lobby creator can start the game</div>
+        </div>
+    </div>
+    <div id="main_content">
+        <div id="upper_container">
+            <h1 id="question_heading">Question 1</h1>
+        </div>
+        <div id="lower_container">
+            <div id="question_space">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, totam error delectus
+                optio iusto sunt aliquid maiores perferendis et, quo exercitationem adipisci, reiciendis soluta omnis
+                rem ipsum id culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nobis odio
+                cumque, sunt, dolores earum culpa aut quibusdam quasi nulla in magnam quas nemo possimus, modi maxime
+                iste mollitia neque
+            </div>
+            <div id="answers_space">
+                <div id="upper_row">
+                    <div class="option" id="option1">option 1</div>
+                    <div class="option" id="option2">option 2</div>
+
+                </div>
+                <div id="lower_row">
+                    <div class="option" id="option3">option 3</div>
+                    <div class="option" id="option4">option 4</div>
+                </div>
+            </div>
+        </div>
+        <div id="score">0</div>
+    </div>
+    <script src="http://localhost:3000/multijs"></script>
+</body>
+
+</html>

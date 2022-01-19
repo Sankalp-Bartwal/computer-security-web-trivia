@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer</title>
+    <style>
+        body {
+            padding: 0 0;
+            margin: 0 0;
+
+        }
+
+        #form {
+            border: solid 2px black;
+            display: inline-flex;
+            /* justify-content: center;
+            align-items: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form">
+        <input type="button" value="New Group" onclick="newGroup()">
+        <input type="button" value="Join a group" onclick="joinGroup()">
+        <input type="text" name="groupid" id="groupid">
+        <input type="text" name="name" id="name_text">
+    </div>
+
+    <script>
+        const ws = new WebSocket("ws://localhost:3001");
+        ws.addEventListener("message", (data) => {
+            console.log(data.data);
+        });
+
+        ws.addEventListener("close", (err) => {
+            console.log("The connection closed...");
+            console.log(err);
+        })
+        function newGroup() {
+            let message_to_send = ":-1:n:" + document.getElementById("name_text").value;
+            ws.send(message_to_send);
+        }
+        function joinGroup() {
+            let group_id = document.getElementById("groupid").value;
+            let name = document.getElementById("name_text").value;
+            // check the group id here
+            if (!isNaN(group_id) && group_id >= 0 && group_id < 100) {
+                if (parseInt(group_id) < 10 && group_id.length == 1) {
+                    group_id = "0" + group_id;
+                }
+                ws.send(":" + group_id + ":j:" + name);
+            }
+            else {
+                console.log("Invalid group id");
+            }
+        }
+    </script>
+</body>
+
+</html>

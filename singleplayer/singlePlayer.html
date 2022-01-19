@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Single player | Trivia</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0 0;
+            padding: 0 0;
+        }
+
+        .upper {
+            width: 100vw;
+            height: 14vh
+        }
+
+        .upper>h1 {
+            margin-top: 0;
+            margin: 0;
+            padding: 0, 0;
+            font-size: 500%;
+        }
+
+        .middle {
+            width: 100vw;
+            height: 76vh;
+
+            background-image: url("http://localhost:3000/singleplayer_image");
+            background-size: 70vw 95vh;
+            background-repeat: no-repeat;
+            background-position-x: 34vw;
+            background-position-y: top;
+
+            pointer-events: none;
+        }
+
+        .q_a_container {
+            z-index: 0;
+            background-color: white;
+        }
+
+        #lower {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(16, 17, 122);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            transition: height 2s;
+            z-index: 2;
+        }
+
+        #lower>a {
+            color: rgb(16, 17, 122);
+            text-decoration: none;
+        }
+
+        #question_space {
+            width: 70vw;
+            margin: auto;
+            margin-bottom: 3vh;
+            font-size: 130%;
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(4px);
+            pointer-events: auto;
+        }
+
+        #answers_space {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 69vw;
+            margin: auto
+        }
+
+        #container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* display: none; */
+        }
+
+        #upper_row,
+        #lower_row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 69vw;
+        }
+
+        .option {
+            width: 34vw;
+            height: 10vh;
+            margin-top: 1vh;
+            text-align: center;
+            font-size: 120%;
+
+            pointer-events: auto;
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(4px);
+        }
+
+        #option1,
+        #option3 {
+            margin-right: 1vw;
+        }
+
+        #score {
+            position: fixed;
+            top: 0;
+            right: 3vw;
+            font-size: 500%;
+        }
+
+        .option:hover {
+            border: 2px solid rgb(16, 17, 122);
+            cursor: pointer;
+        }
+
+        #start_container {
+            text-align: center;
+            color: white;
+
+        }
+
+        #logo {
+            font-size: 700%;
+            margin: 0 0;
+            font-weight: bolder;
+        }
+
+        #logo:hover {
+            cursor: default;
+        }
+
+        #start_button {
+            display: none;
+            font-size: 300%;
+            min-width: 10vw;
+        }
+
+        #check_button,
+        #next_button {
+
+            border: 2px solid rgb(16, 17, 122);
+            background: rgb(193, 203, 247);
+            min-height: 4.7vh;
+            min-width: 11.3vw;
+            text-align: center;
+            font-size: 120%;
+            font-weight: bolder;
+
+            pointer-events: auto;
+            cursor: pointer;
+            margin-top: 2vh;
+
+            display: none;
+        }
+
+        #score_container {
+            text-align: center;
+            color: white;
+            display: none;
+        }
+
+        #score_display {
+            font-size: 700%;
+            font-weight: bolder;
+        }
+
+        #score_display:hover {
+            cursor: default;
+        }
+
+        .start_end_button {
+            font-size: 200%;
+            cursor: default;
+            margin: 2vh 2vw;
+        }
+
+        .start_end_button:hover {
+            cursor: pointer;
+            border: 2px solid wheat;
+        }
+
+        #start_button:hover {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="upper">
+            <h1 id="upper_heading">Question 1</h1>
+        </div>
+        <div class="middle">
+            <div id="question_space">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas fugiat quaerat sequi dolore
+                    laborum
+                    dolorum quae adipisci maiores eligendi. Voluptate reiciendis sed fugiat optio magnam autem.
+                    Voluptatibus tenetur odio sed? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Voluptatum
+                    voluptates totam expedita corporis obcaecati quia quos cupiditate facere dolores maiores, cumque
+                    ut
+                    iusto eligendi, atque laudantium? Iste accusamus cupiditate necessitatibus.</p>
+            </div>
+            <div id="answers_space">
+                <div id="upper_row">
+                    <div class="option" id="option0" onclick="pressed(0, 'option0')">Option 0</div>
+                    <div class="option" id="option1" onclick="pressed(1, 'option1')">Option 1</div>
+                </div>
+                <div id="lower_row">
+                    <div class="option" id="option2" onclick="pressed(2, 'option2')">Option 2</div>
+                    <div class="option" id="option3" onclick="pressed(3, 'option3')">Option 3</div>
+                </div>
+                <div id="check_button" onclick="check()">Check Answer</div>
+                <div id="next_button" onclick="next()">Next Question</div>
+            </div>
+        </div>
+        <div id="score">0</div>
+    </div>
+    <div id="lower">
+        <div id="start_container">
+            <div id="logo">Single Player</div>
+            <div id="exploring" class="start_end_button" onclick="setMode(':-1:e:')">Exploration Mode</div>
+            <div id="challenge" class="start_end_button" onclick="setMode(':-1:c:')">Challenge Mode</div>
+            <div id="start_button" class="start_end_button" onclick="start()">Start</div>
+        </div>
+        <a href='https://pngtree.com/so/Character' id="credit_link">Character png from pngtree.com/</a>
+        <div id="score_container">
+            <div id="score_display">Score 0</div>
+            <div id="replay_button" class="start_end_button" onclick="location.reload()">Replay</div>
+            <div id="homepage_button" class="start_end_button" onclick="homePageButton()">Back to Home Page</div>
+        </div>
+    </div>
+    <script src="http://localhost:3000/singleplayer_js">
+    </script>
+</body>
+
+</html>

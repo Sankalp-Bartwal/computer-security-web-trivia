@@ -1,0 +1,15 @@
+{
+  "name": "329project",
+  "version": "1.0.0",
+  "description": "This is the final project for cpsc 329. We are making a web trivia based on computer security",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "sankalp bartwal, matthew perry",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.2.3"
+  }
+}
